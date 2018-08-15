@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
-import { Button } from 'semantic-ui-react'
-
+import React, { Component } from 'react'
+import { Container } from 'semantic-ui-react'
+import NavBar from '../../features/nav/navBar/NavBar'
+import EventDashboard from '../../features/event/eventDashboard/EventDashboard'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          
-          <h1 className="App-title">Revent</h1>
-          <button className="ui icon button">
-          <i className="smile icon"></i>
-          CSS Button
-          </button>
-            <div className="ui"></div>
-          <Button icon="smile" content="React button" />
-        </header>
-        
+      <div className='App'>
+        <Container className='main'>
+          <NavBar />
+
+          <EventDashboard />
+        </Container>
+
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
