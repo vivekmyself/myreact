@@ -4,12 +4,12 @@ import EventListItem from './EventListItem'
 class EventList extends Component {
 
   render () {
-    const {events} = this.props
+    const {events, eventEdit} = this.props
     return (
       <div>
         <h2>Event List</h2>
         {events.map((event)=>(
-          <EventListItem key={event.id} event={event} />
+          <EventListItem key={event.id} event={event} eventEdit={eventEdit} />
         ))}
         
         
