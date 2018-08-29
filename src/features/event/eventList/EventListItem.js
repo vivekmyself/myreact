@@ -41,7 +41,7 @@ class EventListItem extends Component {
           </Segment>
           <Segment clearing>
             <span>{event.description}</span>
-            <Button onClick={eventEdit(event)} as='a' color='teal' floated='right' content='View' />
+            <Button onClick={eventEdit(event)} as='a' color='teal' floated='right' content='View'  />
           </Segment>
         </Segment.Group>
       </div>

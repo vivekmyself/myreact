@@ -83,7 +83,7 @@ class EventDashboard extends Component {
     })
   } 
 
-  handleEditEvent = (eventToEdit) =>{
+  handleEditEvent = (eventToEdit) => () =>{
     this.setState({
       selectedEvent:eventToEdit,
       isOpen:true
