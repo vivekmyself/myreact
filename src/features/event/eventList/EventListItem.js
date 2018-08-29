@@ -4,7 +4,7 @@ import EventListAttendee from './EventListAttendee'
 
 class EventListItem extends Component {
   render () {
-    const {event, eventEdit} = this.props;
+    const {event, eventOpen} = this.props;
     return (
       <div>
         <Segment.Group>
@@ -41,7 +41,7 @@ class EventListItem extends Component {
           </Segment>
           <Segment clearing>
             <span>{event.description}</span>
-            <Button onClick={eventEdit(event)} as='a' color='teal' floated='right' content='View'  />
+            <Button onClick={eventOpen(event)} as='a' color='teal' floated='right' content='View'  />
           </Segment>
         </Segment.Group>
       </div>

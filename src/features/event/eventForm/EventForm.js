@@ -37,7 +37,12 @@ import {Segment, Form, Button} from 'semantic-ui-react'
   onFormSubmit = (evt) => {
     evt.preventDefault();
     console.log(this.state.event);
-    this.props.createEvent(this.state.event)
+    if(this.state.event.id){
+      this.props.updateEvent(this.state.event)
+    }else{
+      this.props.createEvent(this.state.event)
+    }
+    
   }
 
   onTitleChange = (evt) =>{
