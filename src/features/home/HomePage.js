@@ -24,7 +24,7 @@ const HomePage = ({ history }) => {
         </div>
       </div>
       <div style={{ textAlign: "center" }}>
-        Icons made by{" "}
+        {/* Icons made by{" "}
         <a href="http://www.freepik.com" title="Freepik">
           Freepik
         </a>{" "}
@@ -38,7 +38,7 @@ const HomePage = ({ history }) => {
           title="Creative Commons BY 3.0"
         >
           CC 3.0 BY
-        </a>
+        </a> */}
       </div>
     </div>
   );
