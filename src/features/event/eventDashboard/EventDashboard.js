@@ -4,6 +4,7 @@ import { Grid } from "semantic-ui-react";
 import EventList from "../eventList/EventList";
 import { deleteEvent } from "../eventActions";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
+import EventActivity from "../eventActivity/EventActivity";
 
 const mapState = state => ({
   events: state.events,
@@ -96,6 +97,7 @@ class EventDashboard extends Component {
             />
           </Grid.Column>
           <Grid.Column width={6}>
+            <EventActivity />
             {/* <Button
               onClick={this.handleFormOpen}
               positive

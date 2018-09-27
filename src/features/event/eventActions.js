@@ -1,4 +1,4 @@
-import {toastr} from 'react-redux-toastr'
+import { toastr } from "react-redux-toastr";
 import {
   CREATE_EVENT,
   UPDATE_EVENT,
@@ -22,38 +22,48 @@ export const fetchEvents = events => {
 
 export const createEvent = event => {
   return async dispatch => {
-    try{
+    try {
       dispatch({
-        type:CREATE_EVENT,
-        payload:{
+        type: CREATE_EVENT,
+        payload: {
           event
         }
       });
-      toastr.success('Success!', 'Rocking Event Included');
-    } catch(error){toastr.error('Oops', 'Something went wrong fix it')}
-  }
-  
+      toastr.success("Success!", "Rocking Event Included");
+    } catch (error) {
+      toastr.error("Oops", "Something went wrong fix it");
+    }
+  };
 };
 
 export const updateEvent = event => {
   return async dispatch => {
-    try{
+    try {
       dispatch({
-        type:UPDATE_EVENT,
-        payload:{
+        type: UPDATE_EVENT,
+        payload: {
           event
         }
       });
-      toastr.success('Success!', 'Rocking Event Updated ');
-    } catch(error){toastr.error('Oops', 'Something went wrong fix it')}
-  }
+      toastr.success("Success!", "Rocking Event Updated ");
+    } catch (error) {
+      toastr.error("Oops", "Something went wrong fix it");
+    }
+  };
 };
 
 export const deleteEvent = eventId => {
-  return {
-    type: DELETE_EVENT,
-    payload: {
-      eventId
+  return async dispatch => {
+    try {
+      dispatch({
+        type: DELETE_EVENT,
+        payload: {
+          eventId
+        }
+      });
+      toastr.success("Success!", "Rocking Event Deleted ");
+    } catch (error) {
+      toastr.error("Oops", "Something went wrong fix it");
     }
   };
 };
