@@ -9,7 +9,8 @@ import rootReducer from "../reducers/rootReducer";
 const rrfirebaseConfig = {
   userProfile: "users",
   attachAuthIsReady: true,
-  useFirestoreForProfile: true
+  useFirestoreForProfile: true,
+  updateProfileOnLogin:false
 };
 
 export const configureStore = preloadedState => {

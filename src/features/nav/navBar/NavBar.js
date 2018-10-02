@@ -14,7 +14,8 @@ const actions = {
 };
 
 const mapState = state => ({
-  auth: state.firebase.auth
+  auth: state.firebase.auth,
+  profile:state.firebase.profile
 });
 class NavBar extends Component {
   // state = {
@@ -40,11 +41,12 @@ class NavBar extends Component {
   };
   render() {
     //const { authendicated } = this.state;
-    const { auth } = this.props;
+    const { auth , profile} = this.props;
     //console.log(auth);
     //const authendicated = auth.authenticated;
     const authendicated = auth.isLoaded && !auth.isEmpty;
     console.log(authendicated);
+    console.log(profile);
     return (
       <div>
         <Menu inverted fixed="top">
@@ -71,7 +73,7 @@ class NavBar extends Component {
               </Menu.Item>
             )}
             {authendicated ? (
-              <SignedInMenu auth={auth} signOut={this.handleSignOut} />
+              <SignedInMenu profile={profile} signOut={this.handleSignOut} />
             ) : (
               <SignedOutMenu
                 signIn={this.handleSignIn}
