@@ -6,11 +6,14 @@ import moment from "moment";
 
 const DateInput = ({
   placeholder,
-  input: { value, onChange, ...restOfInput },
+  input: { value, onChange, onBlur, ...restOfInput },
   width,
   meta: { touched, error },
   ...restData
 }) => {
+  if(value){
+    value = moment(value, 'X')
+  }
   return (
     <Form.Field error={touched && !!error} width={width}>
       <DatePicker
@@ -18,6 +21,7 @@ const DateInput = ({
         placeholder={placeholder}
         selected={value ? moment(value) : null}
         onChange={onChange}
+        onBlur={() => onBlur()}
         {...restOfInput}
       />
       {touched &&
