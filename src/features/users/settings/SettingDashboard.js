@@ -40,7 +40,7 @@ const SettingDashboard = ({ updatePassword, providerId, user, updateProfile }) =
             )}
           />
           <Route path="/settings/photos" component={PhotoPage} />
-          <Route path="/settings/about" component={AboutPage} />
+          <Route path="/settings/about" render={()=><AboutPage updateProfile={updateProfile} initialValues={user} />} />
         </Switch>
       </Grid.Column>
       <SettingNav />
